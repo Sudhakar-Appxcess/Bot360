@@ -37,11 +37,10 @@ app = FastAPI()
 # ]
 
 origins = [
-    # "http://localhost:3000",
-    # "http://127.0.0.1:3000",
-    # "https://bot360-two.vercel.app",
-    # "https://bot360-fastapiu-updated.onrender.com"
-    "*"
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://bot360-two.vercel.app"
+    # "*"
 ]
 
 # app.add_middleware(
@@ -56,7 +55,7 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://bot360-two.vercel.app/"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
