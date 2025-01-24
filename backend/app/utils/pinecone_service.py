@@ -17,7 +17,7 @@ class PineconeService:
             raise ValueError("PINECONE_API_KEY environment variable not set")
             
         self.pc = Pinecone(api_key=self.api_key)
-        self.index_name = os.getenv("PINECONE_INDEX_NAME", "default-index")
+        self.index_name = os.getenv("PINECONE_INDEX", "default-index")
         self.dimension = EMBEDDING_DIMENSION
         self.max_retries = MAX_RETRIES
         self.logger = logging.getLogger(__name__)
