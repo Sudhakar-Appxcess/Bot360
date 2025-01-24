@@ -23,7 +23,7 @@ class DocumentProcessor:
         # Split text into chunks
         chunks = pdf_processor.split_text_into_chunks(
             extracted_data["text"],
-            chunk_size=5000,
+            chunk_size=2000,
             overlap=100
         )
         
